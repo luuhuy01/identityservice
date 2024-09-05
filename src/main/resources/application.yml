@@ -1,0 +1,29 @@
+
+spring:
+  application:
+    name: "identityservice"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: "jdbc:mysql://192.168.0.101:3306/ecommerce?allowPublicKeyRetrieval=true&useSSL=false"
+    username: "root"
+    password: "242999"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  servlet:
+    context-path: "/ecommerce"
+  port: 8080
+
+security:
+  jwt:
+    sign-key: "qyd201unE+Vh8LlYPnE07AXYeysPxC2BmYjAK14cI6ndd9+RZyLTmuZw+P8KtsQm"
+
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+      hibernate: error
